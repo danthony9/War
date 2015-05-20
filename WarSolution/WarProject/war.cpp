@@ -8,6 +8,9 @@ using namespace std;
 int main(){
 	Deck deck;
 	deck.printDeck();
+	cout << "-----------------------------------------------------" << endl;
+	deck.shuffleDeck();
+	deck.printDeck();
 
 	cin.ignore();
 	cin.get();

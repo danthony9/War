@@ -10,7 +10,22 @@ void Deck::printDeck(){
 			_card[i].suiteToString() << endl;
 	}
 }
-void Deck::shuffleDeck(){} //WIP
+void Deck::shuffleDeck(){
+	Card temp1, temp2;
+	int min = 1, max = 51, r;
+	for (int i = 0; i < 51; i++){
+		r = rand() % (max - min + 1) + min;
+		temp1.setRank(_card[i].getRank());
+		temp1.setSuite(_card[i].getSuite());
+		temp2.setRank(_card[r].getRank());
+		temp2.setSuite(_card[r].getSuite());
+		_card[i].setRank(temp2.getRank());
+		_card[i].setSuite(temp2.getSuite());
+		_card[r].setRank(temp1.getRank());
+		_card[r].setSuite(temp1.getSuite());
+		min++;
+	}
+}
 Deck::Deck(){
 	int i = 0;
 	for (int s = CLUBS; s <= SPADES; s++){
