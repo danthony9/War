@@ -14,11 +14,14 @@ enum Suite{
 class Card{
 	Rank _rank;
 	Suite _suite;
+
+	
 public:
 	void setRank(int r){ _rank = static_cast<Rank>(r); }
 	void setSuite(int s){ _suite = static_cast<Suite>(s); }
-	Rank getRank(){ return _rank; }
-	Suite getSuite(){ return _suite; }
+	Rank getRank() const { return _rank; }
+	Suite getSuite() const { return _suite; }
+	Card& operator=(const Card& rhs);
 	string rankToString();
 	string suiteToString();
 };

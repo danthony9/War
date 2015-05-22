@@ -7,7 +7,9 @@ using namespace std;
 
 class Deck{
 	Card _card[52];
+	void swap(Card& first, Card& second);
 public:
+	//const int Size = 52;
 	void printDeck();
 	void shuffleDeck();
 	Deck();

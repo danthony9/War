@@ -29,3 +29,9 @@ string Card::suiteToString(){
 	case 3: return "SPADES";
 	}
 }
+
+Card& Card::operator=(const Card& rhs) {
+	_rank = rhs.getRank();
+	_suite = rhs.getSuite();
+	return *this;
+}

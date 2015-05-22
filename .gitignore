@@ -1,0 +1,4 @@
+*.tlog
+WarSolution/WarProject/Debug/
+WarSolution/Debug/
+*.suo
