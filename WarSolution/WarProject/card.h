@@ -22,6 +22,6 @@ public:
 	Rank getRank() const { return _rank; }
 	Suite getSuite() const { return _suite; }
 	Card& operator=(const Card& rhs);
-	string rankToString();
-	string suiteToString();
+	string rankToString() const;
+	string suiteToString() const;
 };

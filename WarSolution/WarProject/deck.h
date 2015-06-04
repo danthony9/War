@@ -10,7 +10,7 @@ class Deck{
 	void swap(Card& first, Card& second);
 public:
 	//const int Size = 52;
-	void printDeck();
+	void printDeck() const;
 	void shuffleDeck();
 	Deck();
 	~Deck(){}

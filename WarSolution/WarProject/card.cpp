@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-string Card::rankToString(){
+string Card::rankToString() const{
 	switch (_rank){
 	case 2: return "TWO";
 	case 3: return "THREE";
@@ -21,7 +21,7 @@ string Card::rankToString(){
 	case 14: return "ACE";
 	}
 }
-string Card::suiteToString(){
+string Card::suiteToString() const{
 	switch (_suite){
 	case 0: return "CLUBS";
 	case 1: return "DIAMONDS";

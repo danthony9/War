@@ -5,7 +5,7 @@
 #include <string>
 using namespace std;
 
-void Deck::printDeck(){
+void Deck::printDeck() const{
 	for (int i = 0; i < 52; i++){
 		cout << _card[i].rankToString() << " of " <<
 			_card[i].suiteToString() << endl;
@@ -18,7 +18,7 @@ void Deck::shuffleDeck(){
 	srand(time(0));
 	for (int i = 0; i < 52; i++){
 		//r = rand() % (max - min + 1) + min;
-		swap(_card[i], _card[rand() % 52]);
+		swap(_card[i], _card[rand() % 51]);
 	}
 		/*temp1.setRank(_card[i].getRank());
 		temp1.setSuite(_card[i].getSuite());
